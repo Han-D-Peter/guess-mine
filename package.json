@@ -26,12 +26,12 @@
     "socket.io": "^2.2.0"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node src/server --ignore assets/ --ignore src/static",
+    "start": "nodemon --exec babel-node src/server --ignore assets/ --ignore src/static",
     "dev:assets": "gulp"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4"
+    "prettier": "^1.19.1"
   }
 }
