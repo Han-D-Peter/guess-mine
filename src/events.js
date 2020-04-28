@@ -4,7 +4,7 @@ const events = {
   disconnect: "disconnect",
   disconnected: "disconnected",
   sendMsg: "sendMsg",
-  newMsg: "newMsg",
+  newMsg: "newMsg"
 };
 
 export default events;

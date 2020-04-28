@@ -1,6 +1,6 @@
 import events from "./events";
 
-const socketController = (socket) => {
+const socketController = socket => {
   const broadcast = (event, data) => socket.broadcast.emit(event, data);
   socket.on("setNickname", ({ nickname }) => {
     socket.nickname = nickname;
