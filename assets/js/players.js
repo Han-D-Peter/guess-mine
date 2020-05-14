@@ -3,23 +3,23 @@ import {
   hideControls,
   enableCanvas,
   showControls,
-  resetCanvas
+  resetCanvas,
 } from "./paint";
-import { disableChat } from "./chat";
+import { disableChat, enableChat } from "./chat";
 
 const board = document.getElementById("jsPBoard");
 const notifs = document.getElementById("jsNotif");
 
-const addPlayers = players => {
+const addPlayers = (players) => {
   board.innerHTML = "";
-  players.forEach(player => {
+  players.forEach((player) => {
     const playerElement = document.createElement("span");
     playerElement.innerText = `${player.nickname}: ${player.points}`;
     board.appendChild(playerElement);
   });
 };
 
-const setNotifs = text => {
+const setNotifs = (text) => {
   notifs.innerText = "";
   notifs.innerText = text;
 };
@@ -29,6 +29,7 @@ export const handleGameStarted = () => {
   setNotifs("");
   disableCanvas();
   hideControls();
+  enableChat();
 };
 
 export const handleLeaderNotif = ({ word }) => {
